@@ -58,4 +58,34 @@ app.post("/getCityPic", async (req,res) => {
   return res.send(getPic)
 })
 
+
+// Route to start the server
+app.post("/start-server", (req, res) => {
+  exec("npm run dev", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error starting server: ${error.message}`);
+      res.status(500).send("Error starting server.");
+      return;
+    }
+
+    console.log(`Server started: ${stdout}`);
+    res.status(200).send("Server started.");
+  });
+});
+
+// Route to run the build process
+app.post("/run-build", (req, res) => {
+  exec("npm run build", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error running build: ${error.message}`);
+      res.status(500).send("Error running build.");
+      return;
+    }
+
+    console.log(`Build completed: ${stdout}`);
+    res.status(200).send("Build completed.");
+  });
+});
+
+
 app.listen(8000, () => console.log(`whaoooa: server is listening on port ${port}`))

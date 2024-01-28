@@ -29,4 +29,8 @@ module.exports = merge(common, {
         ],
         minimize: true,
     },
+    
+    // devServer: {
+    //     open: true, // Automatically open the default browser
+    // },
 })
