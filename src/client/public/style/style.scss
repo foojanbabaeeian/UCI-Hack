@@ -1,0 +1,46 @@
+@import "./breakPoints";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url("../images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg");
+  // background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "REM", sans-serif;
+
+  .container {
+    min-height: 100vh;
+    .site-header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+
+      .site-title {
+        font-size: 23px;
+        @include respond-to("sm"){
+          font-size: 48px;
+        }
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    #form_row {
+      width: 90%;
+      @include respond-to("lg") {
+        width: 50%;
+      }
+      #city_error{
+        display: none;
+      }
+      #date_error{
+        display: none;
+      }
+    }
+  }
+}

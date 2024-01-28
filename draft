@@ -1,0 +1,15 @@
+geonames_url="https://secure.geonames.org/searchJSON?q=london&maxRows=1&username="
+USERNAME = menoo20
+//you have to encodeURI the location coming from the eventListener or storage or whatever
+let location = encodeURI(localStorage.getItem("location"));
+
+weathrbit_forecast= `https://api.weatherbit.io/v2.0/forecast/daily?lat=${la}&lon=${lo}&units=M&days=${days}&key=${key}`
+weathrbit_current=  `https://api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=M&key=${key}`
+
+pixabay_url = `https://pixabay.com/api/?key=${key}&q=${city}&image_type=photo`
+
+largeImageURL
+
+async function getPicture() {
+    const pKey = process.env.PIXABAY_KEY;
+    let location = encodeURI(localStorage.getItem("location"))
