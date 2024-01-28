@@ -30,4 +30,8 @@ Travel Explorer is a web application that helps users plan their trips by provid
   - [OpenWeatherMap](https://openweathermap.org/api) for weather information
   - [Pixabay](https://pixabay.com/api/docs/) for destination pictures
 
-## Installation
+## CREATOR:
+ - My Lu
+ - Seoyoung Ki
+ - Alicia Lee
+ - Fozhan Babaeiyan Ghamsari
